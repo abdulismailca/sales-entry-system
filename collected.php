@@ -1,5 +1,6 @@
 <?php
 
+
     $name = !empty($_POST['name']) ? $_POST['name'] : '';
     $open = !empty($_POST['open']) ? (float) $_POST['open'] : 0;
     $close = !empty($_POST['close']) ? (float) $_POST['close'] : 0;
@@ -29,6 +30,11 @@
 <html>
 <head>
     <title>collected</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/test.css">
     <link rel="stylesheet" href="assets/css/test.css">
 </head>
 <body>
@@ -45,7 +51,7 @@
     </div>
 </div>
 <div class="main-lf">
-    <center><h2 class="main-lf-h2">DETAILS ENTERED</h2></center>        
+ 
     <div class="table">
         <form method="post" action="database\Database.php" >
             <table>
