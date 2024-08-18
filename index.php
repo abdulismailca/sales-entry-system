@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Task 3</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Data</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/test.css">
+    
 </head>
 <body> 
     <div id="navbar">
@@ -23,8 +27,8 @@
     <div class="main">
         
         <div class="main-rg">
-            <h2>ENTER THE DETAILS BELOW</h2>
-            <form class="form-grid" method="post" action="collected.php">
+    
+            <form class="form-grid" method="post" action="collected.php"  id="myForm" onsubmit="return validateForm()">
                 <div class="form-group">
                     <label for="name">Salesman Name:</label>
                     <input type="text" id="name" name="name" placeholder="Enter name">
@@ -82,6 +86,31 @@
             </form>
         </div>
     </div>
+
+
+   
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var open = document.getElementById("open").value;
+            var close = document.getElementById("close").value;
+            var tdrate = document.getElementById("tdrate").value;
+            var cashoff = document.getElementById("cashoff").value;
+
+
+            if (name === "" || open === "" || close== "" || tdrate=="" || cashoff=="") {
+                alert("All fields must be filled out before calculate.");
+                return false; // Prevents form submission
+            }
+
+            return true; // Allows form submission
+        }
+    </script>
+
+
+</body>
+</html>
 
     
 </body>
